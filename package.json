@@ -1,0 +1,25 @@
+{
+  "name": "congress",
+  "description": "Congress",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TerraEclipse/congress.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/TerraEclipse/congress/issues"
+  },
+  "dependencies": {
+    "level": "~0.15.0",
+    "glob": "~3.2.6"
+  }
+}
