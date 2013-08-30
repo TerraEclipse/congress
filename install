@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 sudo apt-get update
-sudo apt-get install -y git python-dev libxml2-dev libxslt1-dev libz-dev
+sudo apt-get install -y git python-dev libxml2-dev libxslt1-dev libz-dev unzip
 sudo pip install -r requirements.txt
 ./test/run
