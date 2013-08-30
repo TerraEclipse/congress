@@ -17,7 +17,9 @@ require('glob')('**/data.json')
     console.log('putting', id);
     db.put(id, data, tryEnd);
   })
-  .on('end', tryEnd)
+  .on('end', function () {
+    tryEnd();
+  })
 
 function tryEnd (err) {
   if (errored) return;
