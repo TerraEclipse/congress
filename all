@@ -5,6 +5,7 @@ for (( s=2013; s>=1973; s-- ))
 do
   ./run votes --congress=$c --session=$s
   if [ "$((($s + 1) % 2))" -eq 0 ]; then
+    ./run amendments --congress=$c
     wget http://unitedstates.sunlightfoundation.com/congress/data/$c.zip
     unzip -q $c.zip -d data/$c
     rm $c.zip
