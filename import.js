@@ -16,6 +16,7 @@ require('glob')(base + '**/data.json')
 
     function tryGet (id) {
       db.get(id, function (err, data) {
+        if (err && err.name === 'NotFoundError') err = null;
         if (err) return tryEnd(err);
         if (!data) put();
         else {
