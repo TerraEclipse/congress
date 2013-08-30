@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd /home/ubuntu/congress
 c=113
 for (( s=2013; s>=1973; s-- ))
 do
