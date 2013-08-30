@@ -28,7 +28,7 @@ require('glob')(base + '**/data.json')
 
     function put () {
       try {
-        var data = require(base + p);
+        var data = require(p);
       }
       catch (e) {
         return console.error(e);
