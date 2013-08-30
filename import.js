@@ -3,12 +3,12 @@ var db = require('level')('./db', {valueEncoding: 'json'});
 console.log('searching for data files...');
 var latch = 1, errored = false;
 
-var base = './' + (process.argv[2] && process.argv[2] + '/' || '');
+var base = './' + (process.argv[2] && process.argv[2].replace(/\/$/, '') + '/' || '');
 
 require('glob')(base + '**/data.json')
   .on('match', function (p) {
     var match = p.match(/data\/(\d+)\/(amendments|bills)\/([^\/]+)\/([^\/]+)\//);
-    if (match) return tryGet(match[3] + '-' match[1]);
+    if (match) return tryGet(match[3] + '-' + match[1]);
     var match = p.match(/data\/(\d+)\/votes\/(\d+)\/([^\/]+)\//);
     if (match) return tryGet(match[3] + '-' + match[1] + '.' + match[2]);
     console.error('no match', p);
