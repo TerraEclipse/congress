@@ -6,7 +6,7 @@ var latch = 1, errored = false;
 require('glob')('**/data.json')
   .on('match', function (p) {
     try {
-      var data = require(p);
+      var data = require('./' + p);
     }
     catch (e) {
       return console.error(e);
