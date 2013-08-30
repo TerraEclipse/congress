@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+c=113
+for (( s=2013; s>=1973; s-- ))
+do
+  ./run votes --congress=$c --session=$s
+  if [ "$((($s + 1) % 2))" -eq 0 ]; then
+    wget http://unitedstates.sunlightfoundation.com/congress/data/$c.zip
+    unzip -q $c.zip -d data/$c
+    rm $c.zip
+    c="$(($c - 1))"
+  fi
+done
