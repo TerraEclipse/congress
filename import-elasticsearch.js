@@ -84,9 +84,7 @@ client.indices.createIndex(function (err) {
         return console.error(err);
       }
       if (!--latch) {
-        db.close(function () {
-          console.log('done.');
-        });
+        console.log('done.');
       }
     }
   });
