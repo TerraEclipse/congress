@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "level": "~0.15.0",
-    "glob": "~3.2.6"
+    "glob": "~3.2.6",
+    "elasticsearch": "~0.3.11",
+    "elasticsearch-memcached": "~0.1.1",
+    "modeler-elasticsearch": "0.0.3"
   }
 }
